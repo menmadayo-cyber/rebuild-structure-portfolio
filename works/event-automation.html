@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>スキーイベント運営のデジタル化・自動化｜制作・支援事例｜Rebuild Structure</title>
+<meta name="description" content="スキーイベントの参加者募集から案内メール送付までを、HTML・CSSで作ったサイトとGoogleフォーム・スプレッドシート・GASを組み合わせて仕組み化した、実際のイベント運営で使用した事例です。">
+<meta name="theme-color" content="#0F2647">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="canonical" href="https://rebuild-structure.jp/works/event-automation.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Rebuild Structure">
+<meta property="og:title" content="スキーイベント運営のデジタル化・自動化｜Rebuild Structure">
+<meta property="og:description" content="参加者募集から案内メール送付までを、Webサイト・Googleフォーム・スプレッドシート・GASを組み合わせて仕組み化した、実際のイベント運営で使用した事例です。">
+<meta property="og:url" content="https://rebuild-structure.jp/works/event-automation.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__name">Rebuild Structure</span>
+      <span class="brand__role">AI業務改善・自動化パートナー</span>
+    </a>
+
+    <div class="header-actions">
+      <a class="btn btn-primary" href="../index.html#contact">相談してみる</a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="visually-hidden">メニューを開く</span>
+      </button>
+    </div>
+
+    <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+      <ul class="site-nav__list">
+        <li><a href="../index.html#services">サービス</a></li>
+        <li><a href="../index.html#features">特徴</a></li>
+        <li><a href="../index.html#works">事例</a></li>
+        <li><a href="../index.html#about">プロフィール</a></li>
+        <li><a href="../index.html#pricing">料金</a></li>
+        <li><a href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container container--article article case-page">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol>
+        <li><a href="../index.html">トップ</a></li>
+        <li><a href="../index.html#works">制作・支援事例</a></li>
+        <li aria-current="page">スキーイベント運営のデジタル化・自動化</li>
+      </ol>
+    </nav>
+
+    <div class="case-hero">
+      <div class="tag-row">
+        <span class="tag tag--success">実施実績あり</span>
+        <span class="tag">実務で使用</span>
+      </div>
+      <p class="case-category text-muted">カテゴリ：業務自動化・イベント運営のDX</p>
+      <h1>スキーイベント運営のデジタル化・自動化</h1>
+      <p class="lead">スキーイベントの参加者募集から当日案内までの一連の運営業務を、HTML・CSSで制作したイベントサイトと、Googleフォーム・スプレッドシート・GAS（Googleのサービスを自動で動かす仕組み）を組み合わせてデジタル化しました。実際のイベント運営で使用したものです。</p>
+    </div>
+
+    <div class="case-figure">
+      <img src="../assets/works/ski-event-hero.png" alt="スキーイベント公式サイトのトップ画面" loading="lazy">
+    </div>
+
+    <h2>デモ動画</h2>
+    <p>実際に運営で使用したイベントサイトと、申込受付から参加者情報の管理・案内までをデジタル化した流れをご紹介します。</p>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline>
+        <source src="https://rebuild-structure.jp/assets/videos/ski-event-demo.mp4" type="video/mp4">
+        お使いのブラウザでは動画を再生できません。<a href="https://rebuild-structure.jp/assets/videos/ski-event-demo.mp4">動画ファイルを直接開く</a>
+      </video>
+    </div>
+
+    <h2>どんな課題があったか</h2>
+    <p>イベントの参加申込を紙やメールで受け付けると、名簿への転記や参加者への案内送付を一件ずつ手作業で行う必要があり、運営側の負担になっていました。</p>
+
+    <h2>実施内容・解決アプローチ</h2>
+    <p>参加申込の受付から当日案内までを、単発の制作物としてではなく、一連の業務フローとして仕組み化しました。</p>
+    <ul>
+      <li>HTML・CSSでイベント案内サイトを制作</li>
+      <li>Googleフォームで参加申込を受付</li>
+      <li>申込内容をGoogleスプレッドシートに自動で集約</li>
+      <li>GAS（Google Apps Script、Googleのサービスを自動で動かす仕組み）を使い、登録者へ案内メールを自動配信</li>
+    </ul>
+
+    <h2>全体の処理フロー</h2>
+    <div class="case-flow">
+      <div class="case-flow__main">
+        <div class="case-flow__item">
+          <p class="case-flow__title">イベントHP</p>
+          <p class="case-flow__label">イベント案内・申込導線</p>
+        </div>
+        <span class="case-flow__arrow" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">Googleフォーム</p>
+          <p class="case-flow__label">参加申込受付</p>
+        </div>
+        <span class="case-flow__arrow" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">Googleスプレッドシート</p>
+          <p class="case-flow__label">申込情報を集約</p>
+        </div>
+        <span class="case-flow__arrow" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">GAS</p>
+          <p class="case-flow__label">登録者情報をもとに処理</p>
+        </div>
+      </div>
+      <div class="case-flow__final">
+        <span class="case-flow__arrow case-flow__arrow--down" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">案内メール送信</p>
+          <p class="case-flow__label">参加者へ連絡</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-muted">【代替アプローチ】現在であれば、MakeやPower Automate等のノーコード自動化ツールを使って同様の流れを構築することも検討できます。今回は使い慣れたGoogle系ツールの組み合わせで一連の流れを組みました。</p>
+
+    <h2>主な機能</h2>
+    <ul>
+      <li>参加申込フォーム（Googleフォーム）</li>
+      <li>申込内容の自動集計・名簿化（Googleスプレッドシート）</li>
+      <li>登録者への案内メール自動配信（GAS）</li>
+      <li>HTML・CSSによるレスポンシブ対応のイベント案内サイト</li>
+    </ul>
+
+    <h2>使用技術・ツール</h2>
+    <p>HTML・CSS／Googleフォーム／Googleスプレッドシート／GAS（Google Apps Script）</p>
+
+    <h2>自分が担当した範囲</h2>
+    <p>イベントサイトの制作、フォーム・スプレッドシートの設計、GASによる案内メール自動配信の実装まで、一連の仕組みづくりを担当しました。</p>
+
+    <h2>配慮した点</h2>
+    <ul>
+      <li>参加者個人が特定される情報は、本ページやサイト上に掲載しないようにした。</li>
+      <li>フォームやスプレッドシートの項目を必要最小限にし、運営側が状況を把握しやすい形にした。</li>
+      <li>手作業を残す部分と自動化する部分を切り分け、無理なく運用できる範囲にとどめた。</li>
+    </ul>
+
+    <h2>現在の状態と今後の拡張案</h2>
+    <p>本仕組みは、実際のスキーイベント運営で使用しました。</p>
+    <p>今後の拡張案としては、参加費のオンライン決済との連携、当日受付のデジタル化、Make・Power Automate等への置き換えによるさらなる自動化などを検討しています。</p>
+
+    <h2>注意事項</h2>
+    <div class="notice-box">
+      <p>本事例は実際のイベント運営で使用したものですが、参加者個人が特定される情報は掲載していません。</p>
+      <p>掲載内容は仕組みの説明を目的としており、参加人数などの数値は記載していません。</p>
+    </div>
+
+    <h2>関連資料</h2>
+    <div class="btn-group">
+      <a class="btn btn-secondary" href="https://www.kobumaturi.shop/" target="_blank" rel="noopener noreferrer">実際のサイトを見る</a>
+    </div>
+
+    <div class="case-cta">
+      <h2>同じような仕組みについて相談しませんか</h2>
+      <div class="btn-group btn-group--center">
+        <a class="btn btn-primary" href="../index.html#contact">相談してみる</a>
+      </div>
+    </div>
+
+    <div class="case-other-works">
+      <h2>他の事例を見る</h2>
+      <div class="works-grid">
+        <a class="card other-work-card" href="ai-secretary-app.html">
+          <div class="tag-row">
+            <span class="tag">自主制作</span>
+            <span class="tag tag--primary">主力作品</span>
+          </div>
+          <h3>AI秘書アプリ</h3>
+          <p>Googleログイン・Googleカレンダー連携で予定確認・日程把握を支援する、自主制作のAI秘書Webアプリです。</p>
+          <span class="btn btn-secondary">詳しく見る</span>
+        </a>
+        <a class="card other-work-card" href="make-automation-demo.html">
+          <div class="tag-row">
+            <span class="tag tag--notice">自主制作デモ</span>
+          </div>
+          <h3>Make等を用いた業務自動化デモ</h3>
+          <p>フォーム受付から表登録、お礼メール、Slack通知、支払い案内までをMakeでつないだ自動化デモです。</p>
+          <span class="btn btn-secondary">詳しく見る</span>
+        </a>
+      </div>
+      <a class="back-link" href="../index.html#works">&larr; 事例一覧に戻る</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">Rebuild Structure</p>
+      <p>AI業務改善・自動化パートナー<br>谷口 誠</p>
+    </div>
+    <div>
+      <h3>外部リンク</h3>
+      <div class="footer-links">
+        <a href="https://github.com/menmadayo-cyber/rebuild-structure-portfolio" target="_blank" rel="noopener noreferrer">GitHubを見る</a>
+        <a href="https://rebuild-structure.jp/assets/downloads/Rebuild_Structure_SkillSheet.pdf" target="_blank" rel="noopener">スキルシートPDFを見る</a>
+      </div>
+    </div>
+    <div>
+      <h3>サイト内リンク</h3>
+      <div class="footer-links">
+        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../index.html#top">ページ先頭へ戻る</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Rebuild Structure</p>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>

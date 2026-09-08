@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make等を用いた業務自動化デモ｜制作・支援事例｜Rebuild Structure</title>
+<meta name="description" content="フォームでの受付から、表への登録、お礼メールの送信、Slack通知、支払い案内までを自動でつなぐ仕組みのデモです。Make（複数のサービスをつなげて自動化するツール）を使って作成しました。">
+<meta name="theme-color" content="#0F2647">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="canonical" href="https://rebuild-structure.jp/works/make-automation-demo.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Rebuild Structure">
+<meta property="og:title" content="Make等を用いた業務自動化デモ｜Rebuild Structure">
+<meta property="og:description" content="フォーム受付から表への登録、お礼メール送信、Slack通知、支払い案内までを自動でつなぐ、Makeを使った業務自動化デモです。">
+<meta property="og:url" content="https://rebuild-structure.jp/works/make-automation-demo.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="../index.html">
+      <span class="brand__name">Rebuild Structure</span>
+      <span class="brand__role">AI業務改善・自動化パートナー</span>
+    </a>
+
+    <div class="header-actions">
+      <a class="btn btn-primary" href="../index.html#contact">相談してみる</a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="visually-hidden">メニューを開く</span>
+      </button>
+    </div>
+
+    <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション">
+      <ul class="site-nav__list">
+        <li><a href="../index.html#services">サービス</a></li>
+        <li><a href="../index.html#features">特徴</a></li>
+        <li><a href="../index.html#works">事例</a></li>
+        <li><a href="../index.html#about">プロフィール</a></li>
+        <li><a href="../index.html#pricing">料金</a></li>
+        <li><a href="../index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container container--article article case-page">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol>
+        <li><a href="../index.html">トップ</a></li>
+        <li><a href="../index.html#works">制作・支援事例</a></li>
+        <li aria-current="page">Make等を用いた業務自動化デモ</li>
+      </ol>
+    </nav>
+
+    <div class="case-hero">
+      <div class="tag-row">
+        <span class="tag tag--notice">自主制作デモ</span>
+      </div>
+      <p class="case-category text-muted">カテゴリ：業務自動化（ノーコード連携）</p>
+      <h1>Make等を用いた<span style="white-space: nowrap;">業務自動化デモ</span></h1>
+      <p class="lead">フォームでの受付から、表への登録、お礼メールの送信、Slack通知、支払い案内までを自動でつなぐ仕組みのデモです。Make（複数のサービスをつなげて自動化するツール）を使って作成しました。</p>
+    </div>
+
+    <div class="case-figure">
+      <img src="../assets/works/make-automation-demo-hero.png" alt="Google Sheets・Gmail・Slackを連携したMakeの自動化シナリオ画面" loading="lazy">
+    </div>
+
+    <h2>自動化デモ動画</h2>
+    <p>フォーム受付を起点に、データ登録、メール送信、Slack通知などをMakeで連携・自動化する流れをご紹介します。</p>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline>
+        <source src="https://rebuild-structure.jp/assets/videos/make-automation-demo.mp4" type="video/mp4">
+        お使いのブラウザでは動画を再生できません。<a href="https://rebuild-structure.jp/assets/videos/make-automation-demo.mp4">動画ファイルを直接開く</a>
+      </video>
+    </div>
+
+    <h2>どんな課題を想定したか</h2>
+    <p>申込や依頼をフォームで受け付けたあと、内容を表に転記し、お礼メールを個別に送り、担当チームに知らせ、支払いの案内を送る、という一連の作業を手作業で行っている現場は少なくありません。件数が増えるほど、対応漏れや遅れが起きやすくなります。</p>
+
+    <h2>どういう仕組みか</h2>
+    <p>Makeを使い、次の流れを自動でつなげています。一つのフォーム入力をきっかけに、後続の作業がまとめて動く形にしています。</p>
+
+    <h2>全体の処理フロー</h2>
+    <div class="case-flow">
+      <div class="case-flow__main">
+        <div class="case-flow__item">
+          <p class="case-flow__title">フォーム受付</p>
+        </div>
+        <span class="case-flow__arrow" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">データ登録</p>
+          <p class="case-flow__label">Google Sheetsへ登録</p>
+        </div>
+        <span class="case-flow__arrow" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">お礼メール</p>
+          <p class="case-flow__label">Gmailで送信</p>
+        </div>
+        <span class="case-flow__arrow" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">Slack通知</p>
+          <p class="case-flow__label">担当チームへ連絡</p>
+        </div>
+      </div>
+      <div class="case-flow__final">
+        <span class="case-flow__arrow case-flow__arrow--down" aria-hidden="true"></span>
+        <div class="case-flow__item">
+          <p class="case-flow__title">支払い案内</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>工夫した点</h2>
+    <ul>
+      <li>ノーコード（プログラムを書かずに設定でつなげられる）のツールを使い、非エンジニアでも流れの確認・修正がしやすい形にした。</li>
+      <li>各ステップを独立させ、どこか一つを止めたり差し替えたりしても全体が崩れにくい構成にした。</li>
+    </ul>
+
+    <h2>使用した技術・ツール</h2>
+    <p>連携サービス：Make / Gmail / Slack / Google Sheets</p>
+
+    <h2>注意事項</h2>
+    <div class="notice-box">
+      <p>本事例は自主制作のデモであり、実在の企業・取引のデータは含まれていません。</p>
+      <p>実際の業務規模での運用結果や成果を保証するものではなく、仕組みづくりの一例としてご紹介しています。</p>
+    </div>
+
+    <div class="case-cta">
+      <h2>同じような仕組みについて相談しませんか</h2>
+      <div class="btn-group btn-group--center">
+        <a class="btn btn-primary" href="../index.html#contact">相談してみる</a>
+      </div>
+    </div>
+
+    <div class="case-other-works">
+      <h2>他の事例を見る</h2>
+      <div class="works-grid">
+        <a class="card other-work-card" href="ai-secretary-app.html">
+          <div class="tag-row">
+            <span class="tag">自主制作</span>
+            <span class="tag tag--primary">主力作品</span>
+          </div>
+          <h3>AI秘書アプリ</h3>
+          <p>Googleログイン・Googleカレンダー連携で予定確認・日程把握を支援する、自主制作のAI秘書Webアプリです。</p>
+          <span class="btn btn-secondary">詳しく見る</span>
+        </a>
+        <a class="card other-work-card" href="event-automation.html">
+          <div class="tag-row">
+            <span class="tag tag--success">実施実績あり</span>
+          </div>
+          <h3>スキーイベント運営のデジタル化・自動化</h3>
+          <p>参加者募集から案内メール送付までを、Webサイト・Googleフォーム・スプレッドシート・GASで仕組み化した事例です。</p>
+          <span class="btn btn-secondary">詳しく見る</span>
+        </a>
+      </div>
+      <a class="back-link" href="../index.html#works">&larr; 事例一覧に戻る</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">Rebuild Structure</p>
+      <p>AI業務改善・自動化パートナー<br>谷口 誠</p>
+    </div>
+    <div>
+      <h3>外部リンク</h3>
+      <div class="footer-links">
+        <a href="https://github.com/menmadayo-cyber/rebuild-structure-portfolio" target="_blank" rel="noopener noreferrer">GitHubを見る</a>
+        <a href="https://rebuild-structure.jp/assets/downloads/Rebuild_Structure_SkillSheet.pdf" target="_blank" rel="noopener">スキルシートPDFを見る</a>
+      </div>
+    </div>
+    <div>
+      <h3>サイト内リンク</h3>
+      <div class="footer-links">
+        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../index.html#top">ページ先頭へ戻る</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Rebuild Structure</p>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>
